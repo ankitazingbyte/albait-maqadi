@@ -1,0 +1,40 @@
+<div id="wrapper">  
+    <!-- Page Content -->
+    <div id="page-wrapper">
+        <div class="container-fluid">
+            <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">Products</h4>
+                </div>
+                <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+                    <a href="https://themeforest.net/item/elite-admin-responsive-dashboard-web-app-kit-/16750820" target="_blank" class="btn btn-danger pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Buy Now</a>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Dashboard</a></li>
+                        <li class="active">Products</li>
+                    </ol>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="white-box">
+                        <% @products.each do |product| %>
+                            <div class="product-img">
+                                <%= image_tag product.image.url %>
+                                <div class="pro-img-overlay"><a href="javascript:void(0)" class="bg-info"><i class="ti-marker-alt"></i></a><a href="javascript:void(0)" class="bg-danger"><i class="ti-trash"></i></a></div>
+                            </div>
+                            <div class="product-text">
+                                <span class="pro-price bg-danger">$<% product.price %></span>
+                                <h3 class="box-title m-b-0">Rounded Chair</h3>
+                                <small class="text-muted db">globe type chair for rest</small>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
+            <!--row -->
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>
